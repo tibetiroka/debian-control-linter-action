@@ -1,0 +1,34 @@
+name: 'debian-control-linter'
+description: 'Linting control files'
+inputs:
+  file:
+    description: 'The target file'
+    required: false
+  preset:
+    description: 'The preset to use'
+    required: false
+  enable:
+    description: 'Additional checks to enable'
+    required: false
+  disable:
+    description: 'Additional checks to disable'
+    required: false
+  type:
+    description: 'The type of control file to lint'
+    required: false
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v4
+    - name: Download linter
+      run: ${GITHUB_ACTION_PATH}/download.sh
+      shell: bash
+    - name: Run linter
+      run: ${GITHUB_ACTION_PATH}/execute.sh
+      shell: bash
+      env:
+        FILE: ${{ inputs.file }}
+        PRESET: ${{ inputs.preset }}
+        ENABLE: ${{ inputs.enable }}
+        DISABLE: ${{ inputs.disable }}
+        TYPE: ${{ inputs.type }}
