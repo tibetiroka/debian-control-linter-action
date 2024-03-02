@@ -1,5 +1,6 @@
 name: 'debian-control-linter'
-description: 'Linting control files'
+author: 'tibetiroka'
+description: 'Linter for debian control files'
 inputs:
   file:
     description: 'The target file'
