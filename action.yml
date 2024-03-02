@@ -1,6 +1,9 @@
 name: 'debian-control-linter'
 author: 'tibetiroka'
 description: 'Linter for debian control files'
+branding:
+  icon: 'check-square'
+  color: 'green'
 inputs:
   file:
     description: 'The target file'
