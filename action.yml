@@ -1,6 +1,6 @@
 name: 'debian-control-linter'
 author: 'tibetiroka'
-description: 'Linter for debian control files'
+description: 'Linter for debian control and copyright files'
 branding:
   icon: 'check-square'
   color: 'green'
